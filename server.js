@@ -44,9 +44,6 @@ app.get('/movie', function handleGetMovie(req, res) {
         )
     }
 
-    res.json(response)
-})
-
 app.use((error, req, res, next) => {
     let response
     if (process.env.NODE_ENV === 'production') {
@@ -61,4 +58,5 @@ const PORT = process.env.PORT || 9000
 
 app.listen(PORT, () => {
     console.log(`Server listening at http://localhost:${PORT}`)
+})
 })
